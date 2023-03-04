@@ -22,8 +22,8 @@ public class CribaEratostenesTest {
     @Test
     public void testGenerarPrimos() {
         System.out.println("generarPrimos");
-        int max = 0;
-        int[] expResult = new int[0];
+        int max = 2;
+        int[] expResult = {2};
         int[] result = CribaEratostenes.generarPrimos(max);
         assertArrayEquals(expResult, result);
     }
