@@ -23,21 +23,21 @@ package numerosprimos;
 public class CribaEratostenes {
 
     /**
-     * Generar números primos de 1 a max
+     * Generar números primos de 1 a valorMax
      *
-     * @param max es el valor máximo
+     * @param valorMax es el valor máximo
      * @return Vector de números primos
      */
-    public static int[] generarPrimos(int max) {
+    public static int[] generarPrimos(int valorMax) {
         int i, j;
-        if (max >= 2) {
+        if (valorMax >= 2) {
 
             // Declaraciones
-            int dim = max + 1; // Tamaño del array 
-            boolean[] esPrimo = new boolean[dim];
+            int dimension = valorMax + 1; // Tamaño del array 
+            boolean[] esPrimo = new boolean[dimension];
 
             // Inicializar el array
-            for (i = 0; i < dim; i++) {
+            for (i = 0; i < dimension; i++) {
                 esPrimo[i] = true;
             }
 
@@ -45,10 +45,10 @@ public class CribaEratostenes {
             esPrimo[0] = esPrimo[1] = false;
 
             // Criba
-            for (i = 2; i < Math.sqrt(dim) + 1; i++) {
+            for (i = 2; i < Math.sqrt(dimension) + 1; i++) {
                 if (esPrimo[i]) {
                     // Eliminar los múltiplos de i
-                    for (j = 2 * i; j < dim; j += i) {
+                    for (j = 2 * i; j < dimension; j += i) {
                         esPrimo[j] = false;
                     }
                 }
@@ -56,14 +56,14 @@ public class CribaEratostenes {
 
             // ¿Cuántos primos hay? 
             int cuenta = 0;
-            for (i = 0; i < dim; i++) {
+            for (i = 0; i < dimension; i++) {
                 if (esPrimo[i]) {
                     cuenta++;
                 }
             }
             // Rellenar el vector de números primos
             int[] primos = new int[cuenta];
-            for (i = 0, j = 0; i < dim; i++) {
+            for (i = 0, j = 0; i < dimension; i++) {
                 if (esPrimo[i]) {
                     primos[j++] = i;
                 }
@@ -71,7 +71,7 @@ public class CribaEratostenes {
 
             return primos;
 
-        } else { // max < 2 
+        } else { // valorMax < 2 
 
             return new int[0]; // Vector vacío
         }
