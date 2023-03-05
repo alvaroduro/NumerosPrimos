@@ -17,15 +17,20 @@ public class CribaEratostenesTest {
     }
 
     /**
-     * Test of generarPrimos method, of class CribaEratostenes.
+     * Test del método generarPrimos, de la clase CribaEratostenes.
      */
     @Test
     public void testGenerarPrimos() {
         System.out.println("generarPrimos");
-        int max = 100;
-        int[] expResult = {2,3,5,7,11,13,17,19,23,29,31,37,
-            41,43,47,53,59,61,67,71,73,79,83,89,97};
+        int max = 3;
+        
+        //Resultado esperado(array con los número 2 y 3
+        int[] expResult = {2,3};
+        
+        //Introducimos el parámetros
         int[] result = CribaEratostenes.generarPrimos(max);
+        
+        //Compara el resultado esperado con el resultado
         assertArrayEquals(expResult, result);
     }
     
