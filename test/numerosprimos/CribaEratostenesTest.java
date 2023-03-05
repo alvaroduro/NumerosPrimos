@@ -22,10 +22,10 @@ public class CribaEratostenesTest {
     @Test
     public void testGenerarPrimos() {
         System.out.println("generarPrimos");
-        int valorMax = 0;
+        int valorMax = 2;
 
         //Resultado esperado (arry vacío)
-        int[] expResult = new int[0];
+        int[] expResult = {2};
 
         //Introducimos el parámetro
         int[] result = CribaEratostenes.generarPrimos(valorMax);
