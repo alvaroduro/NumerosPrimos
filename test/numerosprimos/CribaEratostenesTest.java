@@ -12,20 +12,25 @@ import static org.junit.Assert.*;
  * @author Alvaro Duran <adurama436@g.educaand.es>
  */
 public class CribaEratostenesTest {
-    
+
     public CribaEratostenesTest() {
     }
 
     /**
-     * Test of generarPrimos method, of class CribaEratostenes.
+     * Test del método generarPrimos, de la clase CribaEratostenes.
      */
     @Test
     public void testGenerarPrimos() {
         System.out.println("generarPrimos");
-        int max = 2;
-        int[] expResult = {2};
-        int[] result = CribaEratostenes.generarPrimos(max);
+        int valorMax = 0;
+
+        //Resultado esperado (arry vacío)
+        int[] expResult = new int[0];
+
+        //Introducimos el parámetro
+        int[] result = CribaEratostenes.generarPrimos(valorMax);
+
+        //Compara el resultado esperado con el resultado
         assertArrayEquals(expResult, result);
     }
-    
 }
