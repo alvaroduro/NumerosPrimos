@@ -18,6 +18,7 @@ public class CribaEratostenesTest {
 
     /**
      * Test del método generarPrimos, de la clase CribaEratostenes.
+     * Método de prueba para posteriores ramas del método generarPrimos().
      */
     @Test
     public void testGenerarPrimos() {
