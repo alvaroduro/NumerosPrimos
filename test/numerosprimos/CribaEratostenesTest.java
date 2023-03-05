@@ -22,9 +22,16 @@ public class CribaEratostenesTest {
     @Test
     public void testGenerarPrimos() {
         System.out.println("generarPrimos");
-        int valorMax = 3;
-        int[] expResult = {2,3};
+        int valorMax = 100;
+        
+        //Resultado esperado (array con los primos del número 100)
+        int[] expResult = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,
+            47,53,59,61,67,71,73,79,83,89,97};
+        
+        //Introducimos el parámetro
         int[] result = CribaEratostenes.generarPrimos(valorMax);
+        
+        //Comprara el resultado esperado con el resultado
         assertArrayEquals(expResult, result);
     }
     
