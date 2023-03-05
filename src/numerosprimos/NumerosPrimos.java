@@ -13,11 +13,16 @@ package numerosprimos;
 public class NumerosPrimos {
 
     public static void main(String[] args) {
-        int[] centArray = CribaEratostenes.generarPrimos(100);             // Probamos a generar los primos entre 1 y 100
+        int valorMax = 100;
+        int[] centArray = CribaEratostenes.generarPrimos(valorMax);             // Probamos a generar los primos entre 1 y 100
+        imprimeArray(centArray);
+
+    }
+
+    private static void imprimeArray(int[] centArray) {
         for (int i = 0; i < centArray.length; i++) {
             System.out.println(centArray[i]);                   // Los mostramos
 
         }
-
     }
 }
